@@ -1,5 +1,5 @@
 //
-//  ALAiPadViewController.h
+//  ALAiPhoneViewController.h
 //  AudioList
 //
 //  Created by Ali Houshmand on 5/8/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALAiPadViewController : UIViewController
+@interface ALAiPhoneViewController : UIViewController
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALAiPadViewController : UIViewController
+@interface ALAiPadSplitViewController : UISplitViewController
 
 @end

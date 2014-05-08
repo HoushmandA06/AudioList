@@ -1,5 +1,5 @@
 //
-//  ALAiPadViewController.h
+//  ALATableViewCell.h
 //  AudioList
 //
 //  Created by Ali Houshmand on 5/8/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALAiPadViewController : UIViewController
+@interface ALATableViewCell : UITableViewCell
+
+@property (nonatomic) NSInteger index;
 
 @end
