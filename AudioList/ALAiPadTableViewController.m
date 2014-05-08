@@ -60,7 +60,6 @@
 }
 
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ALATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -71,8 +70,29 @@
     // Configure the cell...
     
     return cell;
-
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+{
+    NSDictionary *listItem = [[ALAAudioData audioData] allAlbumItems][indexPath.row];
+    
+    NSLog(@"%@",listItem);
+    
+   
+    // [self.navigationController pushViewController:webController animated:YES];
+    // UIWindow *window = [[UIApplication sharedApplication].windows firstObject];
+    //  UINavigationController *navController = (UINavigationController *)window.rootViewController;
+    
+    //NSURL * url = [NSURL URLWithString:listItem[@"github"]];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    //[webView loadRequest:request];
+    // above does same as line with [webview...
+    
+    
+    
+}
+
 
 
 

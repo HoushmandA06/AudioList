@@ -26,6 +26,8 @@
         albumName.backgroundColor = [UIColor blackColor];
         [self.contentView addSubview:albumName];
         
+        
+        
     }
     return self;
 }

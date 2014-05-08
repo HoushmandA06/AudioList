@@ -7,6 +7,9 @@
 //
 
 #import "ALAiPadViewController.h"
+#import "ALAAudioData.h"
+#import "ALATableViewCell.h"
+#import "ALAiPadTableViewController.h"
 
 @interface ALAiPadViewController ()
 
@@ -33,13 +36,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    albumName = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 300, 50)];
-    albumName.text = @"name";
+    albumName = [[UILabel alloc] initWithFrame:CGRectMake(400, 600, 200, 100)];
+    albumName.font = [UIFont fontWithName:@"Helvetica" size:50];
+    albumName.backgroundColor = [UIColor darkGrayColor];
     albumName.textColor = [UIColor orangeColor];
     [self.view addSubview:albumName];
     
     // Do any additional setup after loading the view.
 }
+
+-(void)setIndex:(NSIndexPath *)indexPath
+{
+   
+    NSDictionary * albumInfo = [[ALAAudioData audioData] allAlbumItems][indexPath.row];
+    albumName.text = albumInfo[@"name"];
+    
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
