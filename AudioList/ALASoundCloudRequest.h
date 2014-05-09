@@ -10,7 +10,7 @@
 
 @interface ALASoundCloudRequest : NSObject
 
-+ (NSDictionary *)getUserWithUsername:(NSString *)username;
++(void)getUserWithUsername:(NSString *)username;
 
 
 @end

@@ -44,7 +44,6 @@
     
     [ALASoundCloudRequest getUserWithUsername:nil];
     
-    
     return YES;
 }
 
