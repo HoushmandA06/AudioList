@@ -8,7 +8,7 @@
 
 #import "ALAAppDelegate.h"
 #import "ALAiPadSplitViewController.h"  // SPLIT VIEW CONTROLLER
-
+#import "ALASoundCloudRequest.h"
 
 @implementation ALAAppDelegate
 
@@ -41,6 +41,10 @@
     }
     
     [self.window makeKeyAndVisible];
+    
+    [ALASoundCloudRequest getUserWithUsername:nil];
+    
+    
     return YES;
 }
 

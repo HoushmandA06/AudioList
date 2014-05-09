@@ -8,6 +8,7 @@
 
 #import "ALAiPadTableViewController.h"
 #import "ALATableViewCell.h"
+#import "ALAiPadViewController.h" // iPad detailVC
 #import "ALAAudioData.h" // singleton
 
 @interface ALAiPadTableViewController ()
@@ -75,7 +76,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 {
+    
+    
     NSDictionary *listItem = [[ALAAudioData audioData] allAlbumItems][indexPath.row];
+    
     
     NSLog(@"%@",listItem);
     

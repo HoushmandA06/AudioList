@@ -7,11 +7,8 @@
 //
 
 #import "ALAiPadSplitViewController.h"
-
 #import "ALAiPadTableViewController.h"
-#import "ALAiPadViewController.h"
-
-
+#import "ALAiPadViewController.h" // iPad detailVC
 
 @interface ALAiPadSplitViewController () <UISplitViewControllerDelegate>
 
@@ -24,18 +21,18 @@
     UINavigationController * nc;
 }
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
         
         detailVC = [[ALAiPadViewController alloc] initWithNibName:nil bundle:nil];
         
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
         
         listVC = [[ALAiPadTableViewController alloc] initWithStyle:UITableViewStylePlain];
+        
+        listVC.detailVC = detailVC;
         
         self.viewControllers = @[listVC,nc];
         
