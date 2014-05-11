@@ -42,8 +42,12 @@
         
        // NSDictionary * user = [soundCloudItem objectForKey:@"user"]; // gets dictionary user
         //username = [user valueForKey:@"username"];  //gets username within user
+     
         username = soundCloudItem[@"user"][@"username"];  // does the same thing as lines above
         NSLog(@"%@",username);
+        
+        NSString * kindTest = soundCloudItem[@"kind"];
+        NSLog(@"%@",kindTest);
         
         NSString * title = soundCloudItem[@"tracks"][0][@"title"];
         NSLog(@"%@",title);
