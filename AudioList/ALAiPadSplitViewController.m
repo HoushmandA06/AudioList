@@ -47,8 +47,7 @@
 
 -(void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
 {
-    
-    
+
     barButtonItem.title = @"Button";
     detailVC.navigationItem.leftBarButtonItem = barButtonItem;
    // detailVC.navigationController.navigationBarHidden = NO;
