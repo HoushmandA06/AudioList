@@ -21,6 +21,9 @@
 		0F211BE0191BB91C00730F8C /* AudioListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F211BDF191BB91C00730F8C /* AudioListTests.m */; };
 		0F211BEB191BC50E00730F8C /* ALAiPadSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F211BEA191BC50E00730F8C /* ALAiPadSplitViewController.m */; };
 		0FB65B5119211BA300980253 /* ALAiPadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65B5019211BA300980253 /* ALAiPadTableViewController.m */; };
+		0FB65B541921390E00980253 /* ALADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65B531921390E00980253 /* ALADictionary.m */; };
+		0FB65B5719213A1B00980253 /* ALAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65B5619213A1B00980253 /* ALAUser.m */; };
+		0FB65B5A19213A6A00980253 /* ALAPlaylist.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB65B5919213A6A00980253 /* ALAPlaylist.m */; };
 		0FD72E811921002600A3AB2B /* ALAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD72E801921002600A3AB2B /* ALAData.m */; };
 		0FD72E851921010B00A3AB2B /* ALATrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD72E841921010B00A3AB2B /* ALATrack.m */; };
 		0FD72E89192104D000A3AB2B /* ALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD72E88192104D000A3AB2B /* ALASoundCloudRequest.m */; };
@@ -57,6 +60,12 @@
 		0F211BEA191BC50E00730F8C /* ALAiPadSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadSplitViewController.m; sourceTree = "<group>"; };
 		0FB65B4F19211BA300980253 /* ALAiPadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAiPadTableViewController.h; sourceTree = "<group>"; };
 		0FB65B5019211BA300980253 /* ALAiPadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAiPadTableViewController.m; sourceTree = "<group>"; };
+		0FB65B521921390E00980253 /* ALADictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALADictionary.h; sourceTree = "<group>"; };
+		0FB65B531921390E00980253 /* ALADictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALADictionary.m; sourceTree = "<group>"; };
+		0FB65B5519213A1B00980253 /* ALAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAUser.h; sourceTree = "<group>"; };
+		0FB65B5619213A1B00980253 /* ALAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAUser.m; sourceTree = "<group>"; };
+		0FB65B5819213A6A00980253 /* ALAPlaylist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAPlaylist.h; sourceTree = "<group>"; };
+		0FB65B5919213A6A00980253 /* ALAPlaylist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAPlaylist.m; sourceTree = "<group>"; };
 		0FD72E7F1921002600A3AB2B /* ALAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAData.h; sourceTree = "<group>"; };
 		0FD72E801921002600A3AB2B /* ALAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAData.m; sourceTree = "<group>"; };
 		0FD72E831921010B00A3AB2B /* ALATrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATrack.h; sourceTree = "<group>"; };
@@ -190,6 +199,12 @@
 			children = (
 				0FD72E831921010B00A3AB2B /* ALATrack.h */,
 				0FD72E841921010B00A3AB2B /* ALATrack.m */,
+				0FB65B5519213A1B00980253 /* ALAUser.h */,
+				0FB65B5619213A1B00980253 /* ALAUser.m */,
+				0FB65B5819213A6A00980253 /* ALAPlaylist.h */,
+				0FB65B5919213A6A00980253 /* ALAPlaylist.m */,
+				0FB65B521921390E00980253 /* ALADictionary.h */,
+				0FB65B531921390E00980253 /* ALADictionary.m */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -302,10 +317,13 @@
 			files = (
 				0FD72E811921002600A3AB2B /* ALAData.m in Sources */,
 				0F211BC7191BB91C00730F8C /* main.m in Sources */,
+				0FB65B5A19213A6A00980253 /* ALAPlaylist.m in Sources */,
 				0FB65B5119211BA300980253 /* ALAiPadTableViewController.m in Sources */,
 				0F211BCB191BB91C00730F8C /* ALAAppDelegate.m in Sources */,
 				0F211BEB191BC50E00730F8C /* ALAiPadSplitViewController.m in Sources */,
 				0FD72E89192104D000A3AB2B /* ALASoundCloudRequest.m in Sources */,
+				0FB65B541921390E00980253 /* ALADictionary.m in Sources */,
+				0FB65B5719213A1B00980253 /* ALAUser.m in Sources */,
 				0FD72E851921010B00A3AB2B /* ALATrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,21 +1,17 @@
 //
-//  ALATrack.m
+//  ALADictionary.m
 //  AudioList
 //
 //  Created by Ali Houshmand on 5/12/14.
 //  Copyright (c) 2014 Ali Houshmand. All rights reserved.
 //
 
-#import "ALATrack.h"
+#import "ALADictionary.h"
 
-@implementation ALATrack
+@implementation ALADictionary
 {
     NSMutableDictionary * dict;
-}
 
-+(id)newTrack
-{
-    return [[ALATrack alloc] init];
 }
 
 
@@ -25,7 +21,7 @@
     
     if(self)
     {
-    dict = [@{} mutableCopy];
+        dict = [@{} mutableCopy];
     }
     return self;
 }

@@ -11,6 +11,9 @@
 @implementation ALAData
 {
     NSMutableArray * tracks;
+    NSMutableArray * users;
+    NSMutableArray * playlists;
+
 }
 
 +(ALAData *)mainData
@@ -31,6 +34,9 @@
     if(self)
     {
         tracks = [@[] mutableCopy];
+        
+        
+        
     }
     return self;
 }
@@ -44,6 +50,15 @@
 {
     return [tracks copy];
 }
+
+
+
+
+
+
+
+
+
 
 
 @end
