@@ -16,4 +16,12 @@
     return [[ALAUser alloc] init];
 }
 
+//+(id)newUserWithUsername:(NSString *)username
+//{
+//   
+//  
+//    
+//}
+
+
 @end

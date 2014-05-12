@@ -10,4 +10,6 @@
 
 @interface ALAiPadSplitViewController : UISplitViewController
 
+// @property (nonatomic, strong) UITabBarController * tabBarController;
+
 @end

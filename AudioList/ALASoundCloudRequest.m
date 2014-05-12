@@ -34,28 +34,29 @@
         
         NSArray * scInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
-        for (NSDictionary * playlist in scInfo)
+        for (NSDictionary * playListInfo in scInfo)
         {
-            ALAPlaylist * playa = [ALAPlaylist newPlaylist];
-            playa[@"title"] = playlist[@"title"];
-            [[ALAData mainData] addNewPlaylist:playa];
-
-            // create a new playlist and set things like playlist title
+            ALAPlaylist * playlist = [ALAPlaylist newPlaylist];
+            playlist[@"title"] = playListInfo[@"title"];
+            [[ALAData mainData] addNewPlaylist:playlist];
             
-            for (NSDictionary * trackInfo in playlist[@"tracks"])
+            for (NSDictionary * trackInfo in playListInfo[@"tracks"])
             {
                 if(!trackInfo[@"streamable"]) continue;
                 ALATrack * track = [ALATrack newTrack];
+                track.playlist = playlist;
                 track[@"title"] = trackInfo[@"title"];
                 track[@"url"] = trackInfo[@"stream_url"];
+                
+                [playlist.tracks addObject:track];
+                
                 [[ALAData mainData] addNewTrack:track];
                 
-    
                 ALAUser * user = [ALAUser newUser];
                 user[@"name"] = trackInfo[@"user"][@"username"];
+                track.user = user;
                 [[ALAData mainData] addNewUser:user];
             }
-
         }
         
         NSLog(@"%@", [[ALAData mainData] allTracks]);

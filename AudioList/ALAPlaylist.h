@@ -15,9 +15,9 @@
 +(id)newPlaylist;
 
 
-@property ALAUser * user;
+// @property (nonatomic) ALAUser * user;
 
-@property NSArray * track;
+@property (nonatomic) NSMutableArray * tracks;
 
 
 

@@ -12,9 +12,14 @@
 
 +(id)newPlaylist;
 {
-    return [[ALAPlaylist alloc] init];
-    
+   return [[ALAPlaylist alloc] init];
 }
 
+-(NSMutableArray *)tracks
+{
+    if(_tracks == nil) _tracks = [@[] mutableCopy];
+    return _tracks;
+    
+}
 
 @end

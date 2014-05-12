@@ -10,9 +10,13 @@
 
 @interface ALAUser : ALADictionary
 
+// newUserWithUsername class method that takes in a username parameter
+
+// +(id)newUserWithUsername:(NSString *)username;
+
 +(id)newUser;
 
-@property NSArray * playlist;
+// @property (nonatomic) NSArray * playlist;
 
 
 @end

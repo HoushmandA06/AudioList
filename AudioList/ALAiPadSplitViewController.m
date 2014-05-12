@@ -19,8 +19,9 @@
     ALAiPadTableViewController * listVC;
     UIViewController * detailVC;
     UINavigationController * nc;
+    UITabBarController * tabBar;
+     
 }
-
 
 //////// iPAD SPLIT VC
 
@@ -29,16 +30,24 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 
+      
+        UITableViewController * playlistVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
         
+        // add play stop button to play music from stream URL
         detailVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
         
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
-        
+
+        // listVC tab bar "tracks" or "playlists" buttons, click on it and listVC should pop with selected tab
         listVC = [[ALAiPadTableViewController alloc] initWithStyle:UITableViewStylePlain];
         
-        self.viewControllers = @[listVC,nc];
+        tabBar = [[UITabBarController alloc] init];
+        [tabBar setViewControllers:@[listVC,playlistVC]];
         
-        //self.presentsWithGesture = YES;
+        listVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:0];
+        playlistVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
+        
+        self.viewControllers = @[tabBar,nc];
         
         self.delegate = self;
         
@@ -53,10 +62,9 @@
 {
     barButtonItem.title = @"Button";
     detailVC.navigationItem.leftBarButtonItem = barButtonItem;
-   // detailVC.navigationController.navigationBarHidden = NO;
+    // detailVC.navigationController.navigationBarHidden = NO;
     nc.navigationBarHidden = NO;
-    
-}
+ }
 
 -(void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
