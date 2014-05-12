@@ -36,27 +36,28 @@
         
         for (NSDictionary * playlist in scInfo)
         {
-            
-         
-            
-            
+            ALAPlaylist * playa = [ALAPlaylist newPlaylist];
+            playa[@"title"] = playlist[@"title"];
+            [[ALAData mainData] addNewPlaylist:playa];
+
             // create a new playlist and set things like playlist title
             
             for (NSDictionary * trackInfo in playlist[@"tracks"])
             {
                 if(!trackInfo[@"streamable"]) continue;
-                
                 ALATrack * track = [ALATrack newTrack];
-                
                 track[@"title"] = trackInfo[@"title"];
-                
                 track[@"url"] = trackInfo[@"stream_url"];
-                
                 [[ALAData mainData] addNewTrack:track];
+                
+    
+                ALAUser * user = [ALAUser newUser];
+                user[@"name"] = trackInfo[@"user"][@"username"];
+                [[ALAData mainData] addNewUser:user];
             }
+
         }
         
-
         NSLog(@"%@", [[ALAData mainData] allTracks]);
         NSLog(@"%@", [[ALAData mainData] allPlaylists]);
         NSLog(@"%@", [[ALAData mainData] allUsers]);
