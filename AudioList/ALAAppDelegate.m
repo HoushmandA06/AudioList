@@ -7,7 +7,7 @@
 //
 
 #import "ALAAppDelegate.h"
-#import "ALAiPadViewController.h"
+#import "ALAiPadSplitViewController.h"
 
 @implementation ALAAppDelegate
 
@@ -23,7 +23,7 @@
     if([UIDevice currentDevice].userInterfaceIdiom ==  UIUserInterfaceIdiomPad)  // UIUserInterface is a singleton
     {
         
-        ALAiPadViewController * splitVC = [[ALAiPadViewController alloc] initWithNibName:nil bundle:nil];
+        ALAiPadSplitViewController * splitVC = [[ALAiPadSplitViewController alloc] initWithNibName:nil bundle:nil];
         
 
         //// splitcontrollers require two controllers: left side "list", right side "detail"
