@@ -36,6 +36,10 @@
         
         for (NSDictionary * playlist in scInfo)
         {
+            
+         
+            
+            
             // create a new playlist and set things like playlist title
             
             for (NSDictionary * trackInfo in playlist[@"tracks"])

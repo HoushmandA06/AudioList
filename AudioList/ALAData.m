@@ -34,13 +34,13 @@
     if(self)
     {
         tracks = [@[] mutableCopy];
-        
-        
-        
+        users = [@[] mutableCopy];
+        playlists = [@[] mutableCopy];
     }
     return self;
 }
 
+//// TRACKS
 -(void)addNewTrack:(ALATrack *)track
 {
     [tracks addObject:track];
@@ -51,14 +51,27 @@
     return [tracks copy];
 }
 
+//// USERS
+-(void)addNewUser:(ALAUser *)user;
+{
+    [users addObject:user];
+}
 
+-(NSArray *)allUsers;
+{
+    return [users copy];
+}
 
+//// PLAYLISTS
+-(void)addNewPlaylist:(ALAPlaylist *)playlist;
+{
+    [playlists addObject:playlist];
+}
 
-
-
-
-
-
+-(NSArray *)allPlaylists;
+{
+    return [playlists copy];
+}
 
 
 @end
