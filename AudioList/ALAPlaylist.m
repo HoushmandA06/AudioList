@@ -10,4 +10,11 @@
 
 @implementation ALAPlaylist
 
++(id)newPlaylist;
+{
+    return [[ALAPlaylist alloc] init];
+    
+}
+
+
 @end

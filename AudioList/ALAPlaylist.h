@@ -8,6 +8,17 @@
 
 #import "ALADictionary.h"
 
+@class ALAUser;
+
 @interface ALAPlaylist : ALADictionary
+
++(id)newPlaylist;
+
+
+@property ALAUser * user;
+
+@property NSArray * track;
+
+
 
 @end

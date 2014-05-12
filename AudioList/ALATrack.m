@@ -9,9 +9,7 @@
 #import "ALATrack.h"
 
 @implementation ALATrack
-{
-    NSMutableDictionary * dict;
-}
+
 
 +(id)newTrack
 {

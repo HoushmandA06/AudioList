@@ -8,6 +8,12 @@
 
 #import "ALAUser.h"
 
+
 @implementation ALAUser
+
++(id)newUser
+{
+    return [[ALAUser alloc] init];
+}
 
 @end

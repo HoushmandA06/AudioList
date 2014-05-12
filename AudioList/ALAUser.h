@@ -10,4 +10,9 @@
 
 @interface ALAUser : ALADictionary
 
++(id)newUser;
+
+@property NSArray * playlist;
+
+
 @end

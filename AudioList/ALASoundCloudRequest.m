@@ -58,9 +58,9 @@
         
 
         NSLog(@"%@", [[ALAData mainData] allTracks]);
-        
-      
-        
+        NSLog(@"%@", [[ALAData mainData] allPlaylists]);
+        NSLog(@"%@", [[ALAData mainData] allUsers]);
+    
         
         NSNotificationCenter * nCenter = [NSNotificationCenter defaultCenter]; // singleton
         
